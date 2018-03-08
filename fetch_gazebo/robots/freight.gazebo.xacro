@@ -40,7 +40,7 @@
 
   <!-- SICK TIM561 (25m Range) -->
   <gazebo reference="laser_link">
-    <sensor type="ray" name="base_laser">
+    <sensor type="gpu_ray" name="gpu_base_laser">
       <pose>0 0 0 0 0 0</pose>
       <visualize>true</visualize>
       <update_rate>15</update_rate>
@@ -65,7 +65,7 @@
           <stddev>0.02</stddev>
         </noise>
       </ray>
-      <plugin name="gazebo_ros_base_hokuyo_controller" filename="libgazebo_ros_laser.so">
+      <plugin name="gazebo_ros_base_hokuyo_controller" filename="libgazebo_ros_gpu_laser.so">
         <topicName>/base_scan</topicName>
         <frameName>laser_link</frameName>
       </plugin>
